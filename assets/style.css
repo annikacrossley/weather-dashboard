@@ -1,0 +1,54 @@
+html {
+    line-height: 1;
+    -webkit-text-size-adjust: 100%;
+}
+
+:root {
+    font-family: sans-serif;
+}
+
+header {
+    background-color: blue;
+    color: white;
+}
+
+h1 {
+    margin: 0px 0px 10px 0px;
+    text-align: center;
+    line-height: 2;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#result {
+    color: black;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+li {
+    list-style-type: none;
+    line-height: 2;;
+}
+
+.five-day {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#one, #two, #three, #four, #five {
+    color: white;
+    background-color: gray;
+    padding: 5px 30px 10px 5px;
+}
