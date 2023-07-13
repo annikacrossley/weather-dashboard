@@ -18,16 +18,16 @@ h1 {
     line-height: 2;
 }
 
-#container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
 main {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+} 
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 #result {
@@ -38,7 +38,7 @@ main {
 
 li {
     list-style-type: none;
-    line-height: 2;;
+    line-height: 2;
 }
 
 .five-day {
@@ -50,5 +50,10 @@ li {
 #one, #two, #three, #four, #five {
     color: white;
     background-color: gray;
-    padding: 5px 30px 10px 5px;
+    padding: 10px 30px 10px 10px;
+    margin: 10px;
+}
+
+button {
+    font-size: 20px;
 }
