@@ -1,10 +1,6 @@
-// that city is added to the search history
-
 //WHEN I view current weather conditions for that city THEN I am presented with the city name, the date, an icon representation of weather conditions
 
 //WHEN I view future weather conditions for that city THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions
-
-//WHEN I click on a city in the search history THEN I am again presented with current and future conditions for that city
 
 let APIkey = "5ae0c255890061ed7b0bad5e03c377e9"
 let fetchButton = document.getElementById('search-button')
