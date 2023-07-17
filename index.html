@@ -13,12 +13,17 @@
     <main>
         <div id="search">
             <h2 id="search-title">Search for a City:</h2>
-            <textarea id="city-search"></textarea><br>
+            <input id="city-search" type="text" aria-label="Search"></input><br>
             <button id="search-button">Search</button>
+        </div>
+        <div id="history">
+            <h2>Search History</h2>
+            <p id="search-history"></p>
         </div>
         <div id="container">
             <div id="result">
                 <h2 id="city-name">City Name</h2>
+                <h3 id="date">Date</h3>
                 <ul>
                     <li id="temp">Temperature</li>
                     <li id="wind">Wind</li>
@@ -27,52 +32,7 @@
             </div>
             <div id="forecast">
                 <h3>5-Day Forecast</h3>
-                <div class="five-day">
-                    <div id="one">
-                        <h3>Date</h3>
-                        <p>icon</p>
-                        <ul>
-                            <li>Temp</li>
-                            <li>Wind</li>
-                            <li>Humidity</li>
-                        </ul>
-                    </div>
-                    <div id="two">
-                        <h3>Date</h3>
-                        <p>icon</p>
-                        <ul>
-                            <li>Temp</li>
-                            <li>Wind</li>
-                            <li>Humidity</li>
-                        </ul>
-                    </div>
-                    <div id="three">
-                        <h3>Date</h3>
-                        <p>icon</p>
-                        <ul>
-                            <li>Temp</li>
-                            <li>Wind</li>
-                            <li>Humidity</li>
-                        </ul>
-                    </div>
-                    <div id="four">
-                        <h3>Date</h3>
-                        <p>icon</p>
-                        <ul>
-                            <li>Temp</li>
-                            <li>Wind</li>
-                            <li>Humidity</li>
-                        </ul>
-                    </div>
-                    <div id="five">
-                        <h3>Date</h3>
-                        <p>icon</p>
-                        <ul>
-                            <li>Temp</li>
-                            <li>Wind</li>
-                            <li>Humidity</li>
-                        </ul>
-                    </div>
+                <div class="container">
                 </div>
             </div>
         </div>    

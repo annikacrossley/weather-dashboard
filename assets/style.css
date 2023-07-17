@@ -1,6 +1,7 @@
 html {
     line-height: 1;
     -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 :root {
@@ -41,13 +42,11 @@ li {
     line-height: 2;
 }
 
-.five-day {
+.container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-#one, #two, #three, #four, #five {
+    border: 1px solid black;
     color: white;
     background-color: gray;
     padding: 10px 30px 10px 10px;
