@@ -17,5 +17,5 @@ WHEN I click on a city in the search history<br>
 THEN I am again presented with current and future conditions for that city<br>
 
 <h2>Live Webpage</h2>
-<a href=
+<a href="https://annikacrossley.github.io/weather-dashboard/">Weather Dashboard</a>
 <img src="assets\live-weather-app.png" alt="screenshot of live weather app">
