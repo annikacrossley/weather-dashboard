@@ -54,6 +54,30 @@ function forecast (latitude, longitude) {
     })
 }
 
+function addSearchHistory(cityName) {
+    storedCities.push(cityName)
+    localStorage.setItem("history", JSON.stringify(storedCities))
+}
+
+// function displayHistory() {
+//     let cityList = document.getElementById("city-list")
+//     cityList.innerHTML = " "
+//     let storedCities = getLocalStorage('storedCities')
+//     if (storedCities) {
+//         storedCities.reverse()
+//         for(i=0; i<storedCities.length; i++) {
+//             let city = storedCities[i]
+//             let item = document.createElement('button')
+//             item.textContent = city
+//             item.addEventListener('click', function() {
+//                 document.querySelector("#city-search").value = this.textContent
+//                  citySearch(this.textContent)
+//             })
+//             cityList.appendChild(item)
+//         }
+//     }
+// }
+
 fetchButton.addEventListener('click', function() {
     let citySearch = document.querySelector("#city-search").value
     getApi(citySearch)
@@ -62,13 +86,5 @@ fetchButton.addEventListener('click', function() {
         city:citySearch
     })
     localStorage.setItem("history", JSON.stringify(storedCities))
-    // let cityList = ""
-    // for(i=0; i<11; i++) {
-    //     cityList= `
-    //     <ul>
-    //         <li>${storedCities[i].city}</li>
-    //     </ul>
-    //     `
-    // }
-    // cityList = document.getElementById("city-list").innerHTML
-});
+    })
+;

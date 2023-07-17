@@ -19,6 +19,28 @@ h1 {
     line-height: 2;
 }
 
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+#today-and-future {
+    width: 70%;
+    display: block;
+    float: right;
+}
+
+#search-and-history {
+    width: 30%;
+    display: block;
+    float: left;
+}
+
 #result {
     color: black;
     border: 1px solid black;
@@ -33,3 +55,4 @@ li {
 button {
     font-size: 20px;
 }
+
