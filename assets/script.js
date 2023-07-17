@@ -7,7 +7,7 @@
 //WHEN I click on a city in the search history THEN I am again presented with current and future conditions for that city
 
 let APIkey = "5ae0c255890061ed7b0bad5e03c377e9"
-let fetchButton = document.getElementById('search-button');
+let fetchButton = document.getElementById('search-button')
 
 function getApi(cityName) {
     let requestUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + APIkey + '&units=imperial'
@@ -16,6 +16,7 @@ function getApi(cityName) {
     }).then(function(data) {
         console.log(data)
         document.querySelector("#city-name").textContent = data.name
+        //document.querySelector("date-today") =  
         document.querySelector("#temp").textContent = "Temperature: " + data.main.temp + "F"
         document.querySelector("#wind").textContent = "Wind: " + data.wind.speed + "mph"
         document.querySelector("#humidity").textContent = "Humidity: " + data.main.humidity + "%"
@@ -25,7 +26,7 @@ function getApi(cityName) {
 
 function forecast (latitude, longitude) {
     let requestUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + latitude + '&lon=' + longitude + '&appid=' + APIkey + '&units=imperial'
-    let container = document.querySelector('.container')
+    let container = document.querySelector('#container')
     fetch(requestUrl).then(function(response) {
         console.log(response)
         return response.json()
@@ -39,7 +40,7 @@ function forecast (latitude, longitude) {
             let humidity = document.createElement("li")
             if (data.list[i].dt_txt.includes("12:00:00")) {
                 console.log(data.list[i])
-                date.textContent = data.list[i].dt_txt
+                date.textContent = data.list[i].dt_txt.split(' ')[0]
                 temp.textContent = "Temperature: " + data.list[i].main.temp + "F"
                 wind.textContent = "Wind: " + data.list[i].wind.speed + "mph"
                 humidity.textContent = "Humidity: " + data.list[i].main.humidity + "%"
@@ -55,14 +56,19 @@ function forecast (latitude, longitude) {
 
 fetchButton.addEventListener('click', function() {
     let citySearch = document.querySelector("#city-search").value
-    let searchHistory = document.getElementById("search-history")
     getApi(citySearch)
     let storedCities = JSON.parse(localStorage.getItem("history")) || []
     storedCities.push({
         city:citySearch
     })
     localStorage.setItem("history", JSON.stringify(storedCities))
-    for (let i = 0; i < 6; i++) {
-        searchHistory.innerText = storedCities[0]
-    }
+    // let cityList = ""
+    // for(i=0; i<11; i++) {
+    //     cityList= `
+    //     <ul>
+    //         <li>${storedCities[i].city}</li>
+    //     </ul>
+    //     `
+    // }
+    // cityList = document.getElementById("city-list").innerHTML
 });

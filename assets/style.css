@@ -19,18 +19,6 @@ h1 {
     line-height: 2;
 }
 
-main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-} 
-
-#container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
 #result {
     color: black;
     border: 1px solid black;
@@ -40,17 +28,6 @@ main {
 li {
     list-style-type: none;
     line-height: 2;
-}
-
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border: 1px solid black;
-    color: white;
-    background-color: gray;
-    padding: 10px 30px 10px 10px;
-    margin: 10px;
 }
 
 button {
